@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CPU Task Scheduler</title>
+    <link rel="stylesheet" href="assets/css/app.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>CPU Task Scheduler</h1>
+      <p>
+        The function calculates the number of "idle slots" required to ensure
+        that there are enough empty slots for all tasks to have their required
+        cooldown periods. The number of idle slots is calculated as Math.max(0,
+        emptySlots - (tasks.length - maxCount * maxTasks)).
+      </p>
+      <label for="tasks">Enter tasks:</label>
+      <input type="text" id="tasks" placeholder="A,A,A,B,B,B,C,C" />
+      <label for="cooldown">Enter cooldown period (n):</label>
+      <input
+        type="number"
+        id="cooldown"
+        min="0"
+        placeholder="Cooldown period eg:3"
+      />
+      <button onclick="calculateTime()">Calculate</button>
+      <p id="result"></p>
+    </div>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
